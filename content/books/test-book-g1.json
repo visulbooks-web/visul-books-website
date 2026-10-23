@@ -7,5 +7,5 @@
   "product_type": "book",
   "price": 220,
   "description": "abcd 1234",
-  "published": true
+  "published": false
 }
