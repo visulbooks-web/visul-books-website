@@ -1,0 +1,11 @@
+{
+  "title": "Test Book G1",
+  "code": "1234",
+  "grade": "1",
+  "publisher": "test publisher",
+  "category": "maths",
+  "product_type": "book",
+  "price": 220,
+  "description": "abcd 1234",
+  "published": true
+}
