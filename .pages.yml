@@ -15,9 +15,9 @@ content:
     filename: "{primary}.json"
     view:
       primary: title
-      fields: [title, grade, price, published]
-      search: [title, code]
-      sort: [title, grade]
+      fields: [title, grade, publisher, price, published]
+      search: [title, code, publisher]
+      sort: [title, grade, publisher]
     fields:
       - name: title
         label: Book name
@@ -32,12 +32,31 @@ content:
         required: true
         options:
           values:
+            - name: "1"
+              label: Grade 1
+            - name: "2"
+              label: Grade 2
             - name: "3"
               label: Grade 3
             - name: "4"
               label: Grade 4
             - name: "5"
               label: Grade 5
+      - name: publisher
+        label: Publishing company
+        type: string
+      - name: category
+        label: Subject or category
+        type: string
+      - name: product_type
+        label: Product type
+        type: select
+        options:
+          values:
+            - name: book
+              label: Single book
+            - name: package
+              label: Book package
       - name: price
         label: Selling price (LKR)
         type: number
@@ -69,7 +88,6 @@ content:
       - name: whatsapp
         label: WhatsApp Business number (94... without +)
         type: string
-        description: "Example: 94771234567. Keep blank until confirmed."
       - name: tagline
         label: Homepage description
         type: text
