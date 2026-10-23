@@ -1,0 +1,37 @@
+VISUL BOOKS — START HERE
+========================
+This is the first demonstration of your website, not your final live catalogue.
+The included books are examples, not real products. WhatsApp is intentionally
+not yet connected, to avoid sending test enquiries to an unconfirmed number.
+
+FIRST GITHUB UPLOAD (ONE TIME)
+------------------------------
+1. Extract this ZIP on your computer (right-click ZIP > Extract All).
+2. Open your existing GitHub repository:
+   https://github.com/visulbooks-web/visul-books-website
+3. Click 'Add file' > 'Upload files'.
+4. Open the extracted folder. Drag ALL CONTENTS INSIDE THE FOLDER into the
+   GitHub upload screen (including .pages.yml if it is visible). Do not drag
+   the outer folder itself.
+5. Scroll down and click 'Commit changes'.
+
+IMPORTANT: Windows may hide files starting with a dot like .pages.yml.
+Enable 'View > Show > Hidden items' in File Explorer if necessary, or check
+that .pages.yml appears on GitHub after upload.
+
+NEXT, WITH GUIDANCE
+-------------------
+- Connect Cloudflare Pages to your repository (free hosting).
+- Set Build command to: node build.mjs
+- Set Build output directory to: dist
+- Connect Pages CMS so you can Add Book / Edit Book / Upload photos visually.
+
+EVERYDAY MAINTENANCE
+-------------------
+You will add/change books through Pages CMS, not by editing code or uploading
+site files. Cloudflare Pages will rebuild automatically after saves.
+
+SPECIAL NOTE
+------------
+Keep passwords and customer data out of your public GitHub repository.
+Photos of sample pages are public once your site is online.

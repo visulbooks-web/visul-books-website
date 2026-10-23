@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0d1930" />
+  <meta name="description" content="VISUL BOOKS — අධ්‍යාපනික පොත් සහ ප්‍රශ්න පත්‍ර. පොත් සාම්පල බලන්න, WhatsApp ඔස්සේ විමසන්න." />
+  <title>VISUL BOOKS | Discover • Preview • Connect</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="notice" id="announcement">VISUL BOOKS — Your digital book showroom</div>
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="VISUL BOOKS home"><span>VISUL</span><b>BOOKS</b><small>EDUCATIONAL BOOKS</small></a>
+    <nav aria-label="Main navigation"><a href="#collections">පොත් එකතුව</a><button id="topContact" class="contact-min" type="button">WhatsApp <span aria-hidden="true">↗</span></button><button id="cartButton" class="cart-button" type="button" aria-label="Open inquiry list"><span aria-hidden="true">▤</span><span id="cartCount">0</span></button></nav>
+  </header>
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="lightdot"></span> VISUL BOOKS · DIGITAL SHOWROOM</div>
+        <h1>EVERY PAGE<br/><span>OPENS A NEW</span><br/>POSSIBILITY<span class="dot">.</span></h1>
+        <p id="tagline">3, 4 සහ 5 ශ්‍රේණි සඳහා අධ්‍යාපනික පොත් සහ ප්‍රශ්න පත්‍ර කට්ටල.</p>
+        <div class="hero-actions"><a class="btn btn-blue" href="#collections">පොත් බලන්න <span aria-hidden="true">↗</span></a><a class="hero-text-link" href="#how">භාවිත කරන ආකාරය <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-tags"><span>GRADE 03</span><span>GRADE 04</span><span>GRADE 05</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+        <div class="hero-book book-back"><span>03</span><small>THE LEARNING COLLECTION</small><strong>THINK.<br/>EXPLORE.<br/>GROW.</strong><em>VISUL BOOKS</em></div>
+        <div class="hero-book book-mid"><span>05</span><small>THE LEARNING COLLECTION</small><strong>IDEAS<br/>IN EVERY<br/>PAGE.</strong><em>VISUL BOOKS</em></div>
+        <div class="hero-book book-front"><span>04</span><small>THE LEARNING COLLECTION</small><strong>LEARN<br/>MORE.<br/>DREAM<br/>BIG.</strong><em>VISUL BOOKS</em></div>
+        <div class="float-chip">Discover learning<br/><strong>one page at a time</strong></div>
+      </div>
+    </section>
+    <div class="marquee"><div>DISCOVER <span>✦</span> EXPLORE <span>✦</span> LEARN <span>✦</span> VISUL BOOKS <span>✦</span> DISCOVER <span>✦</span> EXPLORE <span>✦</span> LEARN</div></div>
+    <section class="catalogue shell" id="collections">
+      <div class="section-heading"><div><p class="section-kicker">THE COLLECTION</p><h2>Explore Our <em>Books.</em></h2><p>ඔබට අවශ්‍ය ශ්‍රේණිය තෝරන්න — පොත් සහ සාම්පල පිටු පහසුවෙන් බලන්න.</p></div><span class="section-mark">01 / COLLECTIONS</span></div>
+      <div class="grade-controls" role="group" aria-label="Select grade"><button type="button" class="grade active" data-grade="all">සියලුම පොත් <small>ALL BOOKS</small></button><button type="button" class="grade" data-grade="3">3 ශ්‍රේණිය <small>GRADE 03</small></button><button type="button" class="grade" data-grade="4">4 ශ්‍රේණිය <small>GRADE 04</small></button><button type="button" class="grade" data-grade="5">5 ශ්‍රේණිය <small>GRADE 05</small></button></div>
+      <div class="demo-banner" id="demoBanner" hidden><span>PREVIEW MODE</span> මෙහි පෙන්වා ඇති පොත් ආදර්ශ පමණි. සැබෑ නිෂ්පාදන තවම එක් කර නැත.</div>
+      <div id="bookGrid" class="book-grid" aria-live="polite"><p class="loading">Loading the collection…</p></div>
+    </section>
+    <section class="simple-section" id="how"><div class="shell"><p class="section-kicker light-kicker">SIMPLE AS 1 · 2 · 3</p><h2>Browse. Preview. <em>Connect.</em></h2><div class="steps"><div><b>01</b><strong>ශ්‍රේණිය තෝරන්න</strong><p>ඔබේ ශ්‍රේණියේ පොත් බලන්න.</p></div><div><b>02</b><strong>සාම්පල පිටු බලන්න</strong><p>පොතේ පිටු පෙරළා බලන්න.</p></div><div><b>03</b><strong>WhatsApp මගින් විමසන්න</strong><p>පොත් පිළිබඳ තොරතුරු අපෙන් ලබාගන්න.</p></div></div></div></section>
+  </main>
+  <footer><div class="shell footer-inner"><div class="footer-logo">VISUL <span>BOOKS</span><small>Connecting classrooms with knowledge.</small></div><div>Educational book sales &amp; distribution<br/><small>© <span id="year"></span> VISUL BOOKS</small></div></div></footer>
+  <div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-label="Book preview" hidden><div class="shade" data-close="preview"></div><div class="modal-content"><button type="button" class="close" data-close="preview" aria-label="Close preview">×</button><p class="section-kicker">BOOK PREVIEW</p><h2 id="previewTitle">Book</h2><div class="page-stage" id="pageStage" aria-live="polite"></div><div class="page-tools"><button type="button" id="prevPage" aria-label="Previous page">← <span>කලින්</span></button><span id="pageCounter">1 / 1</span><button type="button" id="nextPage" aria-label="Next page"><span>ඊළඟ</span> →</button></div><p id="previewDesc" class="preview-desc"></p><button class="btn btn-green full" id="previewWhatsApp">WhatsApp මගින් විමසන්න ↗</button></div></div>
+  <div class="modal" id="cartModal" role="dialog" aria-modal="true" aria-label="Inquiry list" hidden><div class="shade" data-close="cart"></div><div class="cart-sheet"><button type="button" class="close" data-close="cart" aria-label="Close list">×</button><p class="section-kicker">YOUR SELECTION</p><h2>මගේ පොත් ලැයිස්තුව</h2><div id="cartItems"></div><div class="cart-bottom"><div class="cart-total">ලැයිස්තුවේ මුළු වටිනාකම <strong id="cartTotal">Rs. 0</strong></div><button id="sendCart" class="btn btn-green full" type="button">WhatsApp මගින් ලැයිස්තුව යවන්න ↗</button><p>මෙය මිලදී ගැනීමක් නොවේ. ඔබ WhatsApp ඔස්සේ තොරතුරු විමසීමක් යවයි.</p></div></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
