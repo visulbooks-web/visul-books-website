@@ -1,0 +1,81 @@
+settings:
+  content:
+    merge: true
+media:
+  input: public/media
+  output: /media
+  rename: safe
+  categories: [image]
+content:
+  - name: books
+    label: Books
+    type: collection
+    path: content/books
+    format: json
+    filename: "{primary}.json"
+    view:
+      primary: title
+      fields: [title, grade, price, published]
+      search: [title, code]
+      sort: [title, grade]
+    fields:
+      - name: title
+        label: Book name
+        type: string
+        required: true
+      - name: code
+        label: Book code (optional)
+        type: string
+      - name: grade
+        label: Grade
+        type: select
+        required: true
+        options:
+          values:
+            - name: "3"
+              label: Grade 3
+            - name: "4"
+              label: Grade 4
+            - name: "5"
+              label: Grade 5
+      - name: price
+        label: Selling price (LKR)
+        type: number
+        options:
+          min: 0
+      - name: description
+        label: Description
+        type: text
+      - name: cover
+        label: Book cover image
+        type: image
+      - name: previews
+        label: Sample page images (in order)
+        type: image
+        options:
+          multiple:
+            max: 16
+      - name: published
+        label: Show on website
+        type: boolean
+  - name: business
+    label: Business settings
+    type: file
+    path: content/settings.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: whatsapp
+        label: WhatsApp Business number (94... without +)
+        type: string
+        description: "Example: 94771234567. Keep blank until confirmed."
+      - name: tagline
+        label: Homepage description
+        type: text
+      - name: demo_mode
+        label: Show demo notice
+        type: boolean
+      - name: announcement
+        label: Small top announcement
+        type: string
